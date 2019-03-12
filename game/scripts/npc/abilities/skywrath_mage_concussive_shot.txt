@@ -30,7 +30,7 @@
 
     // Cost
     //-------------------------------------------------------------------------------------------------------------
-    "AbilityManaCost"                                     "95"
+    "AbilityManaCost"                                     "95 95 95 95 145 240"
 
 
     // Special
@@ -81,6 +81,11 @@
       {
         "var_type"                                        "FIELD_INTEGER"
         "scepter_radius"                                  "700"
+      }
+      "10"
+      {
+        "var_type"                                        "FIELD_INTEGER"
+        "creep_damage_pct"                                "75"
       }
     }
   }

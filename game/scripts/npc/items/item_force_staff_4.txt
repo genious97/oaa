@@ -23,8 +23,10 @@
     "ItemResult"          "item_force_staff_4"
     "ItemRequirements"
     {
-      "01"            "item_force_staff_3;item_upgrade_core_3"
-      "02"            "item_force_staff_3;item_upgrade_core_4"
+      "01"                                                "item_force_staff_3;item_upgrade_core_3"
+      "02"                                                "item_force_staff_3;item_upgrade_core_4"
+      "03"                                                "item_pull_staff_2;item_upgrade_core_3"
+      "04"                                                "item_pull_staff_2;item_upgrade_core_4"
     }
   }
 
@@ -52,7 +54,7 @@
 
     // Item Info
     //-------------------------------------------------------------------------------------------------------------
-    "AbilityManaCost"       "25"
+    "AbilityManaCost"       "100"
     "ItemCost"            "15250"
     "ItemShopTags"          "int;damage;attack_speed;hard_to_tag"
     "ItemQuality"         "rare"
@@ -72,8 +74,8 @@
       }
       "02"
       {
-        "var_type"        "FIELD_INTEGER"
-        "bonus_health_regen"  "5 10 20 30 40"
+        "var_type"        "FIELD_FLOAT"
+        "bonus_health_regen"  "2.5 10 20 30 40"
       }
       "03"
       {

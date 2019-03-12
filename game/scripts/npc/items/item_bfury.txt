@@ -6,7 +6,7 @@
   "item_recipe_bfury"
   {
     "ID"                                                  "144"    // unique ID
-    "ItemCost"                                            "0"
+    "ItemCost"                                            "300"
     "ItemShopTags"                                        ""
     "ItemRecipe"                                          "1"
     "ItemResult"                                          "item_bfury"
@@ -40,7 +40,7 @@
 
     // Item Info
     //-------------------------------------------------------------------------------------------------------------
-    "ItemCost"                                            "4100"
+    "ItemCost"                                            "4400"
     "ItemShopTags"                                        "damage;health_regen;mana_regen;hard_to_tag"
     "ItemQuality"                                         "epic"
     "ItemAliases"                                         "bf;battle fury"
@@ -53,32 +53,32 @@
       "01"
       {
         "var_type"                                        "FIELD_INTEGER"
-        "bonus_damage"                                    "45 65 95 145 195"
+        "bonus_damage"                                    "45 60 85 125 180"
       }
       "02"
       {
-        "var_type"                                        "FIELD_INTEGER"
-        "bonus_health_regen"                              "6 12 18 24 30"
+        "var_type"                                        "FIELD_FLOAT"
+        "bonus_health_regen"                              "7.5 14.0 20.0 25.0 32.0"
       }
       "03"
       {
         "var_type"                                        "FIELD_FLOAT"
-        "bonus_mana_regen"                                "2.25 3.3 4.75 6.5 9"
+        "bonus_mana_regen"                                "3.75 4.5 6.25 8.0 10.5"
       }
       "04"
       {
         "var_type"                                        "FIELD_INTEGER"
-        "cleave_damage_percent"                           "40 45 50 55 65"
+        "cleave_damage_percent"                           "35 45 55 65 75"	//OAA
       }
       "05"
       {
         "var_type"                                        "FIELD_INTEGER"
-        "quelling_bonus"                                  "150"
+        "quelling_bonus"                                  "24"
       }
       "06"
       {
         "var_type"                                        "FIELD_INTEGER"
-        "quelling_bonus_ranged"                           "125"
+        "quelling_bonus_ranged"                           "24"	//OAA
       }
       "07"
       {
@@ -88,12 +88,12 @@
       "08"
       {
         "var_type"                                        "FIELD_INTEGER"
-        "cleave_ending_width"                             "330 345 360 375 390"
+        "cleave_ending_width"                             "360"
       }
       "09"
       {
         "var_type"                                        "FIELD_INTEGER"
-        "cleave_distance"                                 "625 645 665 685 705"
+        "cleave_distance"                                 "650"
       }
       "10"
       {
@@ -104,16 +104,6 @@
       {
         "var_type"                                        "FIELD_INTEGER"
         "cast_range_ward"                                 "450"
-      }
-      "12"
-      {
-        "var_type"                                        "FIELD_INTEGER"
-        "tooltip_quelling_bonus"                          "60"
-      }
-      "13"
-      {
-        "var_type"                                        "FIELD_INTEGER"
-        "tooltip_quelling_bonus_ranged"                   "25"
       }
     }
   }

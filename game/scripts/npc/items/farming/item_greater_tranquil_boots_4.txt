@@ -10,7 +10,7 @@
     "ID"                                                  "3043"                            // unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
     "BaseClass"                                           "item_datadriven"
     "Model"                                               "models/props_gameplay/recipe.mdl"
-    "AbilityTextureName"                                  "custom/recipe/recipe_farming_5"
+    "AbilityTextureName"                                  "custom/recipe/recipe_5"
     // Item Info
     //-------------------------------------------------------------------------------------------------------------
     "ItemCost"                                            "20000"
@@ -23,6 +23,11 @@
     "ItemRequirements"
     {
       "01"                                                "item_greater_tranquil_boots_3;item_upgrade_core_4"
+      "02"                                                "item_greater_travel_boots_3;item_upgrade_core_4"
+      "03"                                                "item_greater_arcane_boots_3;item_upgrade_core_4"
+      "04"                                                "item_greater_guardian_greaves_3;item_upgrade_core_4"
+      "05"                                                "item_greater_phase_boots_3;item_upgrade_core_4"
+      "06"                                                "item_greater_power_treads_3;item_upgrade_core_4"
     }
   }
 
@@ -45,7 +50,7 @@
 
     // Item Info
     //-------------------------------------------------------------------------------------------------------------
-    "ItemCost"                                            "32650"
+    "ItemCost"                                            "32600"
     "ItemShopTags"                                        "move_speed;regen_health;armor"
     "ItemQuality"                                         "rare"
     "ItemAliases"                                         "greater tranquil boots 4;tranquil boots 4;tranquils 4"
@@ -64,7 +69,7 @@
       "01"
       {
         "var_type"                                        "FIELD_INTEGER"
-        "bonus_movement_speed"                            "95 105 115 125"
+        "bonus_movement_speed"                            "28 33 38 43"
       }
       "02"
       {
@@ -109,44 +114,39 @@
       "10"
       {
         "var_type"                                        "FIELD_INTEGER"
-        "broken_movement_speed"                           "70 75 80 85"
+        "broken_movement_speed"                           "25 30 35 40"
       }
-      //"11"
-      //{
-      //  "var_type"                                      "FIELD_INTEGER"
-      //  "regen_from_creeps"                             "45 70 120 300"    // New Functionality
-      //}
-      "12"
+      "11"
       {
         "var_type"                                        "FIELD_FLOAT"
         "distance_per_charge"                             "300.0"
       }
+      "12"
+      {
+        "var_type"                                        "FIELD_FLOAT"
+        "check_interval"                                  "0.1" // rupture is 0.25, mana leak is 0.1
+      }
       "13"
       {
         "var_type"                                        "FIELD_FLOAT"
-        "check_interval"                                  "0.25" // rupture is 0.25, mana leak is 0.1
+        "max_dist"                                        "300" // rupture is 1300, mana leak is 300
       }
       "14"
       {
-        "var_type"                                        "FIELD_FLOAT"
-        "max_dist"                                        "2000" // rupture is 1300, mana leak is 300
+        "var_type"                                        "FIELD_INTEGER"
+        "bonus_gold"                                      "3000 5800 10000 17000"
       }
       "15"
       {
         "var_type"                                        "FIELD_INTEGER"
-        "bonus_gold"                                      "3500 6300 10500 17500"
+        "bonus_xp"                                        "0"
       }
       "16"
       {
         "var_type"                                        "FIELD_INTEGER"
-        "bonus_xp"                                        "0"
+        "max_charges"                                     "200"
       }
       "17"
-      {
-        "var_type"                                        "FIELD_INTEGER"
-        "max_charges"                                     "100"
-      }
-      "18"
       {
         "var_type"                                        "FIELD_INTEGER"
         "creep_bounty_percent"                            "30"

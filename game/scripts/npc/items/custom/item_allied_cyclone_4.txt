@@ -23,7 +23,10 @@
     "ItemResult"                                          "item_allied_cyclone_4"
     "ItemRequirements"
     {
-      "01"                                                "item_allied_cyclone_3;item_upgrade_core_4"
+      "01"                                                "item_rod_of_atos_4;item_upgrade_core_4"
+      "02"                                                "item_meteor_hammer_4;item_upgrade_core_4"
+      "03"                                                "item_cyclone_4;item_upgrade_core_4"
+      "04"                                                "item_sheepstick_4;item_upgrade_core_4"
     }
   }
 
@@ -75,12 +78,12 @@
       "02"
       {
         "var_type"              "FIELD_FLOAT"
-        "bonus_mana_regen"      "3.25 4.50 6.50 8.75"
+        "bonus_mana_regen"      "6.0 7.5 9.25 11.5"
       }
       "03"
       {
         "var_type"                                        "FIELD_INTEGER"
-        "bonus_movement_speed"                            "55 60 65 70"
+        "bonus_movement_speed"                            "12 18 24 30"
       }
       "04"
       {
@@ -119,7 +122,7 @@
         {
           "MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"         "%bonus_intellect"
           "MODIFIER_PROPERTY_MANA_REGEN_CONSTANT"         "%bonus_mana_regen"
-          "MODIFIER_PROPERTY_MOVESPEED_BONUS_CONSTANT"      "%bonus_movement_speed"
+          "MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE"      "%bonus_movement_speed"
         }
       }
     }

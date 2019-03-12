@@ -14,9 +14,10 @@
     "SpellDispellableType"                                "SPELL_DISPELLABLE_YES"
     "FightRecapLevel"                                     "1"
     "MaxLevel"                                            "6"
+
     // Casting
     //-------------------------------------------------------------------------------------------------------------
-    "AbilityCastPoint"                                    "0.1 0.1 0.1 0.1"
+    "AbilityCastPoint"                                    "0.1"
 
     // Time
     //-------------------------------------------------------------------------------------------------------------
@@ -33,12 +34,12 @@
       "01"
       {
         "var_type"                                        "FIELD_INTEGER"
-        "radius"                                          "400 400 400 400"
+        "radius"                                          "400"
       }
       "02"
       {
         "var_type"                                        "FIELD_FLOAT"
-        "silence_duration"                                "0.75 1.5 2.25 3.0 3.5 4.25"
+        "silence_duration"                                "2.0 2.5 3.0 3.5 4.0 4.75"
       }
       "03"
       {

@@ -4,7 +4,7 @@ BAREBONES_VERSION = "1.00"
 -- Set this to true if you want to see a complete debug output of all events/processes done by barebones
 -- You can also change the cvar 'barebones_spew' at any time to 1 or 0 for output/no output
 -- this overrides per-module logging rules and just opens the floodgates
-BAREBONES_DEBUG_SPEW = true
+BAREBONES_DEBUG_SPEW = false
 
 if GameMode == nil then
     DebugPrint( '[BAREBONES] creating barebones game mode' )
@@ -55,6 +55,8 @@ require('libraries/basehero')
 require('libraries/gamerules')
 -- Pseudo-random distribution C constant calculator
 require('libraries/cfinder')
+-- Library for handling buildings (OAA custom or DOTA original)
+require('libraries/buildings')
 
 -- These internal libraries set up barebones's events and processes.  Feel free to inspect them/change them if you need to.
 require('internal/gamemode')
@@ -112,11 +114,6 @@ end
 ]]
 function GameMode:OnAllPlayersLoaded()
   DebugPrint("[BAREBONES] All Players have loaded into the game")
-
-  -- i wish this was observer pattern :/
-  if GameLengthVotes ~= nil then
-    GameLengthVotes:SetGameLength()
-  end
 end
 
 --[[
@@ -148,6 +145,7 @@ end
 
 function GameMode:OnPreGame()
   -- initialize modules
+  InitModule(PointsManager)
   InitModule(Music)
   InitModule(Gold)
   InitModule(BlinkBlock)
@@ -163,8 +161,8 @@ function GameMode:OnPreGame()
   InitModule(Doors)
   InitModule(HeroKillGold)
   InitModule(EntityStatProvider)
-  InitModule(ProtectionAura)
   InitModule(RespawnManager)
+  InitModule(BountyRunePick)
 
   CheckCheatMode()
 end
@@ -179,7 +177,7 @@ function GameMode:OnGameInProgress()
 
   -- initialize modules
   InitModule(HudTimer)
-  InitModule(PointsManager)
+  InitModule(SurrenderManager)
   InitModule(CreepPower)
   InitModule(CreepCamps)
   InitModule(CreepItemDrop)
@@ -191,6 +189,10 @@ function GameMode:OnGameInProgress()
   InitModule(DuelRunes)
   InitModule(FinalDuel)
   InitModule(PlayerConnection)
+  InitModule(StatusResistance)
+  InitModule(SaveLoadState)
+  InitModule(Runes)
+  InitModule(ProtectionAura)
 
   -- xpm stuff
   LinkLuaModifier( "modifier_xpm_thinker", "modifiers/modifier_xpm_thinker.lua", LUA_MODIFIER_MOTION_NONE )
@@ -203,7 +205,9 @@ function InitModule(myModule)
       myModule:Init()
     end)
     if err then
-      print(err)
+      local info = debug.getinfo(2, "Sl")
+      print("Script Runtime Error: " .. info.source:sub(2) .. ":" .. info.currentline .. ": " .. err)
+      print(debug.traceback())
       print('Failed to init module!!!')
     end
   end
@@ -217,15 +221,17 @@ function CheckCheatMode()
   end
 end
 
+local OnInitGameModeEvent = CreateGameEvent('OnInitGameMode')
 -- This function initializes the game mode and is called before anyone loads into the game
 -- It can be used to pre-initialize any values/tables that will be needed later
 function GameMode:InitGameMode()
   GameMode = self
   DebugPrint('[BAREBONES] Starting to load Barebones gamemode...')
 
+  InitModule(Components)
+
   InitModule(FilterManager)
   InitModule(Bottlepass)
-  InitModule(GameLengthVotes)
   InitModule(Courier)
   InitModule(HeroSelection)
   InitModule(ChatCommand)
@@ -235,6 +241,8 @@ function GameMode:InitGameMode()
   -- Convars:RegisterCommand( "command_example", Dynamic_Wrap(GameMode, 'ExampleConsoleCommand'), "A console command example", FCVAR_CHEAT )
 
   DebugPrint('[BAREBONES] Done loading Barebones gamemode!\n\n')
+
+  OnInitGameModeEvent()
 end
 
 -- This is an example console command

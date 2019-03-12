@@ -7,17 +7,18 @@
 	{
 		// General
 		//-------------------------------------------------------------------------------------------------------------
-		"BaseClass"						"ability_lua"
-		"ID"							"8481"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
+		"BaseClass"						      "ability_lua"
+		"ID"							          "8481"
+		"AbilityBehavior"				    "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
 		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
 		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+    "AbilityUnitTargetFlags"    "DOTA_UNIT_TARGET_FLAG_NONE"
 		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
-		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellImmunityType"				  "SPELL_IMMUNITY_ENEMIES_NO"
 		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
-		"AbilityTextureName"			"custom/electrician_electric_shield"
-		"ScriptFile"					"abilities/electrician/electrician_electric_shield.lua"
-		"MaxLevel"						"6"
+		"AbilityTextureName"			  "custom/electrician_electric_shield"
+		"ScriptFile"					      "abilities/electrician/electrician_electric_shield.lua"
+		"MaxLevel"						      "6"
 
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
@@ -48,7 +49,7 @@
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"shield_damage_block"	"50"
+				"shield_damage_block"	"10 20 30 40 50 60"
 			}
 			"04"
 			{
@@ -63,7 +64,7 @@
 			"06"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"aura_damage"			"15 30 45 60 130 210"
+				"aura_damage"			"30 40 50 60 140 220"
 			}
 			"07"
 			{

@@ -27,7 +27,7 @@
 
     // Cost
     //-------------------------------------------------------------------------------------------------------------
-    "AbilityManaCost"                                     "150"
+    "AbilityManaCost"                                     "150 200 250 300 350"
 
     // Special
     //-------------------------------------------------------------------------------------------------------------
@@ -36,17 +36,17 @@
       "01"
       {
         "var_type"                                        "FIELD_FLOAT"
-        "duration"                                        "5.0 6.0 7.0 12.0 17.0"
+        "duration"                                        "4.0 5.0 6.0 7.0 8.0" //OAA
       }
       "02"
       {
         "var_type"                                        "FIELD_INTEGER"
-        "illusion_damage_outgoing"                        "-60"
+        "illusion_damage_outgoing"                        "-60 -40 -20 -10 0"
       }
       "03"
       {
         "var_type"                                        "FIELD_INTEGER"
-        "tooltip_outgoing"                                "40"
+        "tooltip_outgoing"                                "40 60 80 90 100"
         "LinkedSpecialBonus"    "special_bonus_unique_spectre_4"
       }
       "04"

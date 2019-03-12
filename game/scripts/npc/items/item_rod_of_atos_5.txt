@@ -24,6 +24,9 @@
     "ItemRequirements"
     {
       "01"                                                "item_rod_of_atos_4;item_upgrade_core_4"
+      "02"                                                "item_meteor_hammer_4;item_upgrade_core_4"
+      "03"                                                "item_cyclone_4;item_upgrade_core_4"
+      "04"                                                "item_sheepstick_4;item_upgrade_core_4"
     }
   }
 
@@ -52,7 +55,7 @@
     // Item Info
     //-------------------------------------------------------------------------------------------------------------
     "AbilityManaCost"                                     "50 150 250 350 450"
-    "ItemCost"                                            "36030"
+    "ItemCost"                                            "35750"
     "ItemShopTags"                                        "int;regen_health"
     "ItemQuality"                                         "rare"
     "ItemAliases"                                         "rod of atos 5;atos 5"
@@ -73,12 +76,12 @@
       "02"
       {
         "var_type"                                        "FIELD_INTEGER"
-        "bonus_strength"                                  "15 25 35 45 55"
+        "bonus_strength"                                  "12 22 32 42 52"
       }
       "03"
       {
         "var_type"                                        "FIELD_INTEGER"
-        "bonus_agility"                                   "6 9 14 20 30"
+        "bonus_agility"                                   "12 22 32 42 52"
       }
       "04"
       {
